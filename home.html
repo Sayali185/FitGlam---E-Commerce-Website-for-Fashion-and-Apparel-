@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitGlam</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body onload="slider()">
-    <img id="slideimg" src="img/img2.jpg" alt="slider" width="100%">
 
-<script>
-var slideimg = document.getElementById("slideimg");
+<body>
 
-var img = [
-    "img/img2.jpg",
-    "img/img13.jpg",
-    "img/img17.jpg",
-    "img/img14.jpg",
-    "img/img39.jpg",
-    "img/img29.jpg",
-    "img/img9.jpg",
-    "img/img24.webp"
-];
+<!-- NAVBAR -->
+<div class="navbar">
+<button>Login</button>
+<button>Sign Up</button>
+</div>
 
-var i = 0;
+<!-- SLIDER -->
+<div class="slider" id="slider">
 
-function slider(){
-    slideimg.src = img[i];
-    i++;
+<!-- TEXT AREA -->
+<div class="overlay">
+<div class="title">FitGlam</div>
+<div class="tagline">
+Not just what you wear — it's how you shine.
+Grace in your style. Power in your presence.
+</div>
+</div>
 
-    if(i >= img.length){
-        i = 0;
-    }
-}
+<!-- SLIDES -->
+<div class="slide active"><img src="img/img2.jpg"></div>
+<div class="slide"><img src="img/img4.jpg"></div>
+<div class="slide"><img src="img/img17.jpg"></div>
+<div class="slide"><img src="img/img14.jpg"></div>
+<div class="slide"><img src="img/img39.jpg"></div>
+<div class="slide"><img src="img/img33.jpg"></div>
+<div class="slide"><img src="img/img9.jpg"></div>
+<div class="slide"><img src="img/img24.webp"></div>
 
-setInterval(slider, 2000);
-</script>
+<!-- ARROWS -->
+<div class="arrow left" onclick="prevSlide()">❮</div>
+<div class="arrow right" onclick="nextSlide()">❯</div>
+
+<!-- DOTS -->
+<div class="dots" id="dots"></div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
