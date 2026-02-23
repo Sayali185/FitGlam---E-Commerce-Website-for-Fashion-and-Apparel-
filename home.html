@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="slider()">
+    <img id="slideimg" src="img/img2.jpg" alt="slider" width="100%">
+
+<script>
+var slideimg = document.getElementById("slideimg");
+
+var img = [
+    "img/img2.jpg",
+    "img/img13.jpg",
+    "img/img17.jpg",
+    "img/img14.jpg",
+    "img/img39.jpg",
+    "img/img29.jpg",
+    "img/img9.jpg",
+    "img/img24.webp"
+];
+
+var i = 0;
+
+function slider(){
+    slideimg.src = img[i];
+    i++;
+
+    if(i >= img.length){
+        i = 0;
+    }
+}
+
+setInterval(slider, 2000);
+</script>
+</body>
+</html>
