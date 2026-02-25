@@ -57,3 +57,29 @@ window.prevSlide = prevSlide;
 setInterval(nextSlide,3000);
 
 });
+
+
+
+/* MENS CAROUSEL */
+const mensItems=document.querySelectorAll(".mens-item");
+let mensIndex=2;
+
+function rotateMens(){
+
+mensItems[mensIndex].classList.remove("active");
+
+mensIndex++;
+
+if(mensIndex >= mensItems.length){
+mensIndex = 0;
+}
+
+mensItems[mensIndex].classList.add("active");
+}
+
+setInterval(rotateMens,2000);
+
+
+
+
+

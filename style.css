@@ -13,14 +13,14 @@ overflow-x:hidden;
 
 /* NAVBAR */
 .navbar{
-position:absolute;
+position:fixed;
 top:20px;
 right:40px;
-z-index:10;
+z-index:999;
 }
 
 .navbar button{
-background:rgb(242, 224, 224);
+background:rgb(186, 176, 176);
 color:rgb(0, 0, 0);
 border:1px solid gold;
 padding:10px 22px;
@@ -158,4 +158,50 @@ font-size:42px;
 font-size:16px;
 }
 
+}
+
+/* MENS SECTION */
+.mens-section{
+padding:120px 0;
+background:#f8f6f2; 
+text-align:center;
+overflow:hidden;
+}
+
+.section-title{
+color:#c9a227;
+font-size:48px;
+margin-bottom:70px;
+font-family:'Playfair Display', serif;
+}
+
+/* CAROUSEL */
+.mens-carousel{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+position:relative;
+}
+
+/* IMAGE BOX */
+.mens-item{
+transition:0.7s;
+transform:scale(0.85);
+opacity:0.6;
+}
+
+.mens-item img{
+width:340px;
+height:420px;
+object-fit:cover;
+border-radius:18px;
+}
+
+/* CENTER IMAGE */
+.mens-item.active{
+transform:scale(1.15);
+opacity:1;
+z-index:2;
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
 }
